@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ML - Detecção de Faces em Imagens</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            min-height: 100%;
+        }
+
+        body {
+            background: #000 url('uploads/background.jpg') no-repeat;
+            background-size: cover;
+            -webkit-font-smoothing: antialiased !important;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            margin: 80px auto;
+            max-width: 450px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content {
+            width: 100%;
+            background: #FFF;
+            margin-top: 50px;
+            border-radius: 4px;
+            padding: 30px;
+        }
+
+        .content>p {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 30px;
+
+        }
+
+        .content form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content input {
+            margin-bottom: 20px;
+
+            height: 45px;
+            padding: 0 15px;
+            font-size: 16px;
+        }
+
+        .content button.btn {
+            border: 0;
+            border-radius: 2px;
+            width: 100%;
+            height: 42px;
+            font-size: 16px;
+            font-weight: bold;
+            background: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .flashes {
+            list-style: none;
+            text-align: center;
+            margin: 10px auto;
+            color: #9F6000;
+            background-color: #FEEFB3;
+            height: 42px;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <p>Detecção de Faces usando Python e ML</p>
+            <p>Carregue a sua imagem</p>
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" />
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class=flashes>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+</body>
+
+</html>
