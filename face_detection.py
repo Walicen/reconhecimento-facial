@@ -5,7 +5,7 @@ import os
 from time import time
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ASSETS = os.path.join(BASE_DIR, 'assets')
+ASSETS = os.path.join(BASE_DIR, 'static')
 CASC = "{0}/haarcascade-frontalface-default.xml".format(ASSETS)
 
 

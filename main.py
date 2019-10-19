@@ -7,7 +7,7 @@ from face_detection import detectar_faces
 SECRET_KEY = "F!Z<6M]gqhuClx[1W)eVZ?^Ng{[+a2"
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ASSETS = os.path.join(BASE_DIR, 'assets')
+ASSETS = os.path.join(BASE_DIR, 'static')
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'bmp'])
 
 app = Flask(__name__)

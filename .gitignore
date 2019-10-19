@@ -3,6 +3,6 @@ __pycache__/
 .venv/
 venv/
 
-assets/*
-!assets/background.jpg
-!assets/haarcascade-frontalface-default.xml
+static/*
+!static/background.jpg
+!static/haarcascade-frontalface-default.xml
